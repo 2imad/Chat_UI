@@ -6,7 +6,7 @@ try
 
 {
 
-    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '*********');
+    $bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '**********');
 
 }
 
@@ -19,9 +19,9 @@ catch(Exception $e)
 }
 
 
-$req = $bdd->prepare('INSERT INTO minichat (pseudo, message) VALUES(?, ?)');
+$req = $bdd->prepare('INSERT INTO minichat (pseudo, message, gender) VALUES(?, ?, ?)');
 
-$req->execute(array($_POST['pseudo'], $_POST['message']));
+$req->execute(array($_POST['pseudo'], $_POST['message'], $_POST['gender']));
 
 
 header('Location: minichat.php');
