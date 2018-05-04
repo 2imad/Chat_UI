@@ -2,7 +2,7 @@
 
 Small  Chat interface
 
-##USED : 
+## tech used : 
 
 1.PHP
 
